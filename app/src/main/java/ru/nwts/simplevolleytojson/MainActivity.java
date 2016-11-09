@@ -3,8 +3,13 @@ package ru.nwts.simplevolleytojson;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     /**
      * https://www.simplifiedcoding.net/android-volley-tutorial-to-get-json-from-server/
@@ -13,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private final String TAG = "MyLogs";
+    public static final String JSON_URL = "http://simplifiedcoding.16mb.com/UserRegistration/json.php";
+
+    private Button buttonGet;
+
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void test(){
       int i = 1;
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
